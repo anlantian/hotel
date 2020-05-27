@@ -1,0 +1,18 @@
+server :
+    port: 8080
+spring:
+  application:
+    name: micro-city
+  datasource:
+    url: jdbc:mysql://localhost:3306/hotel?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka :
+  client :
+    service-url :
+      defaultZone:  http://localhost:20000/eureka
+ribbon:
+    MaxAutoRetries: 0
+    #配置ribbon的下个服务的重试次数，默认是1
+    MaxAutoRetriesNextServer: 0
